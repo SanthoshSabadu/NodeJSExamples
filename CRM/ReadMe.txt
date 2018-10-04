@@ -10,7 +10,7 @@ Install VisualStudio Code
 
 Set the path for both Node and MongoDB, only when zip is downloaded instead of installer.
 	>set path=%PATH%;%CD%
-	>setx path "%PATH%"
+	>setx path "%PATH%" 
 
 Rest APIs with NodeJS, ExpressJs, MongoDB
 	Creating new nodejs project --> Create new folder CRM
