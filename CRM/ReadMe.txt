@@ -23,3 +23,31 @@ Rest APIs with NodeJS, ExpressJs, MongoDB
 		mongod --> will start the mongo db installed 
 		npm i --save nodemon --> refreshes the application automatically.
 		npm i --save-dev babel-cli babel-preset-es2015 babel-preset-stage-0   (bablejs.io) babel tool is used to setup ES6 without any issues to make sure without any compilation server.
+
+
+API calls:
+
+POST: http://localhost:3000/auth/register/
+{
+    "username" : "Admin",
+    "email" : "Admin@gmail.com",
+    "password" : "Admin"
+}
+
+POST: http://localhost:3000/auth/login/
+{
+    "username" : "Admin",
+    "email" : "Admin@gmail.com",
+    "password" : "Admin"
+}
+
+POST: http://localhost:3000/contact/
+<<Use the token received from the above request after JWT>>
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFkbWluQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiQWRtaW4iLCJfaWQiOiI1YmIzYmEyZjZlMDQ4ODQyNjgyNTM3ZGQiLCJpYXQiOjE1Mzg1MDczMzh9.7hDO9-Atc6mOkSbY3uwhgvZUWhi_KUxcEQcSG1f3GOA
+{
+    "firstName" : "Admin",
+    "lastName" : "Admin",
+    "email" : "Admin@gmail.com",
+    "company" : "Admin",
+    "phone" : 99999
+}
